@@ -1,0 +1,16 @@
+{
+  "name": "teamsandplayersdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:delete": "dropdb teams-players",
+    "db:create": "createdb teams-players",
+    "db:schema": "psql -f schema.sql teams-players",
+    "db:seed": "psql -f seed.sql teams-players",
+    "db:reset": "npm run db:delete && npm run db:create && npm run db:schema && npm run db:seed",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
